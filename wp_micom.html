@@ -60,12 +60,12 @@
 		<link rel="preload" href="style.css" onload="this.rel=stylesheet" />
 		
         <link rel="manifest" href="/manifest.json" />
-        <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
 		<script>
 			var lite = false;
 			if (navigator.userAgent.indexOf("Lighthouse") !== -1) lite = true;
 		</script>
-        <!--<script>
+        <!--<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+        <script>
           var OneSignal = window.OneSignal || [];
           OneSignal.push(function() {
             OneSignal.init({

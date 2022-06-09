@@ -1855,6 +1855,23 @@ width="1" alt="" /></noscript>
             <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>
             <script>
 			if(!lite) {
+			
+				function() {
+					var scripts = [
+						'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
+						'https://m.mediaindonesia.com/assets/default/js/less.js', 
+						'https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js',
+						'https://m.mediaindonesia.com/assets/default/js/main.js',
+						'https://m.mediaindonesia.com/assets/default/js/parallax.min.js'
+					];
+					for ( s of scripts ) {
+						sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.async = true; sjs.src = s;
+						s = document.getElementsByTagName('script')[0];
+						s.parentNode.insertBefore(sjs, s);
+					}
+				 })();
+			}
+			
             window.addEventListener('DOMContentLoaded', function() {
 		        (function($) {
                 /*infografis*/

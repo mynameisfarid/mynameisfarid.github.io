@@ -56,11 +56,15 @@
 		<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/DroidSans.ttf" as="font" type="font/ttf" crossorigin />
 		<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/fontawesome-webfont.woff2?v=4.6.3" as="font" type="font/woff2" crossorigin />
 		<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/DroidSerif-Regular.ttf" as="font" type="font/ttf" crossorigin />
-		<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin />
+		<!--<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin />-->
 		<link rel="preload" href="style.css" onload="this.rel=stylesheet" />
 		
         <link rel="manifest" href="/manifest.json" />
         <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+		<script>
+			var lite = false;
+			if (navigator.userAgent.indexOf("Lighthouse") !== -1) lite = true;
+		</script>
         <script>
           var OneSignal = window.OneSignal || [];
           OneSignal.push(function() {
@@ -412,7 +416,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
             <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_top_banner');
+                    if(!lite) OA_show('m_wp_top_banner');
                 </script>
              </div>
             <!-- ADS END -->
@@ -490,7 +494,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
             <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_Breaking_Banner1');
+                    if(!lite) OA_show('m_wp_Breaking_Banner1');
                 </script>
              </div>
             <!-- ADS END -->
@@ -681,7 +685,7 @@ width="1" alt="" /></noscript>
                 </li>
                                         
                         <script type="text/javascript">
-                            OA_show('m_wp_advertorial1');
+                            if(!lite) OA_show('m_wp_advertorial1');
                         </script>
                                 <!-- list berita artikel -->
                 <li class="rows box_b">
@@ -757,7 +761,7 @@ width="1" alt="" /></noscript>
                 </li>
                                         
                         <script type="text/javascript">
-                            OA_show('m_wp_advertorial2');
+                            if(!lite) OA_show('m_wp_advertorial2');
                         </script>
                         
                                 <!-- list berita artikel -->
@@ -1101,7 +1105,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
             <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_Breaking_Banner2');
+                    if(!lite) OA_show('m_wp_Breaking_Banner2');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1187,7 +1191,7 @@ width="1" alt="" /></noscript>
             </ul>
                                     
                         <script type="text/javascript">
-                            OA_show('m_wp_advertorial_opini');
+                            if(!lite) OA_show('m_wp_advertorial_opini');
                         </script>
                         
                             <ul class="part">
@@ -1246,7 +1250,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
              <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_breaking_banner3');
+                    if(!lite) OA_show('m_wp_breaking_banner3');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1286,7 +1290,7 @@ width="1" alt="" /></noscript>
              <!-- ADS -->
              <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_breaking_banner4');
+                    if(!lite) OA_show('m_wp_breaking_banner4');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1387,7 +1391,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
             <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_Showcase_1');
+                    if(!lite) OA_show('m_wp_Showcase_1');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1649,7 +1653,7 @@ width="1" alt="" /></noscript>
               <SCRIPT TYPE="application/javascript" SRC=https://pixel.adsafeprotected.com/rjss/st/820922/57089680/skeleton.js></SCRIPT> <NOSCRIPT><IMG SRC=https://pixel.adsafeprotected.com/rfw/st/820922/57089679/skeleton.gif?gdpr=${GDPR}&gdpr_consent=${GDPR_CONSENT_278}&gdpr_pd=${GDPR_PD} BORDER=0 WIDTH=1 HEIGHT=1 ALT=""></NOSCRIPT> -->
 
                 <script type="text/javascript">
-                    OA_show('m_wp_Showcase_2');
+                    if(!lite) OA_show('m_wp_Showcase_2');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1706,7 +1710,7 @@ width="1" alt="" /></noscript>
             <!-- ADS -->
             <div class="banner">
                 <script type="text/javascript">
-                    OA_show('m_wp_Showcase_3');
+                    if(!lite) OA_show('m_wp_Showcase_3');
                 </script>
              </div>
             <!-- ADS END -->
@@ -1828,7 +1832,7 @@ width="1" alt="" /></noscript>
 
         <div class="fix_bottom_banner">
             <script type="text/javascript">
-                OA_show('m_wp_bottom_sticky');
+                if(!lite) OA_show('m_wp_bottom_sticky');
             </script>
         </div>
             
@@ -1850,7 +1854,8 @@ width="1" alt="" /></noscript>
             <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
             <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>
             <script>
-                $(document).ready(function(){
+			if(!lite) {
+            $(document).ready(function(){
                 /*infografis*/
                 $("#infografis").owlCarousel({
                     singleItem: true,
@@ -1873,9 +1878,11 @@ width="1" alt="" /></noscript>
                     $(this).append("<div class=polbar style= width:" + pol_w + "%><span>" + pol_w + "%</span></div>");
                 }); */
             });
+			}
         </script>
         <script>
-                $(document).ready(function(){
+			if(!lite) {
+            $(document).ready(function(){
 
                 //slider
                 $("#carousel").owlCarousel({
@@ -1887,7 +1894,7 @@ width="1" alt="" /></noscript>
                 });
                 
             }); 
-
+			}
         </script>
         <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/lazyload/lazyestload.js"></script>
       <!--  <script async src='//compass.adop.cc/assets/js/adop/adopJ.js?v=10' ></script><ins class='adsbyadop' _adop_zon = 'd96c8138-c043-4ac0-8087-2cf9642c604c' _adop_type = 're' style='display:inline-block;width:1px;height:1px;' _page_url=''></ins> -->

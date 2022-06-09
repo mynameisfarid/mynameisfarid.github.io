@@ -149,6 +149,9 @@ width="1" alt="" /></noscript>
 				max-height: 449px;
 				overflow: hidden;
 			}
+			.box_a .pic_a, .box_m .pic_a {
+				max-height: inherit !important;
+			}
 		</style>
     </head>
     <body>
@@ -1920,6 +1923,9 @@ width="1" alt="" /></noscript>
 				})(jQuery);
 		    });
 			}
+			
+			if(lite) 
+				$('.owl-carousel').css('display', 'block');
         </script>
         <!--<script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/lazyload/lazyestload.js"></script>-->
       <!--  <script async src='//compass.adop.cc/assets/js/adop/adopJ.js?v=10' ></script><ins class='adsbyadop' _adop_zon = 'd96c8138-c043-4ac0-8087-2cf9642c604c' _adop_type = 're' style='display:inline-block;width:1px;height:1px;' _page_url=''></ins> -->

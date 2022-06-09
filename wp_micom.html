@@ -1848,14 +1848,15 @@ width="1" alt="" /></noscript>
         </script>-->
         
             <!-- FOOTER END -->
-            <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
-            <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
-            <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
-            <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
-            <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>
             <script>
 			if(!lite) {
-            $(document).ready(function(){
+            window.addEventListener('DOMContentLoaded', function() {
+		        (function($) {
                 /*infografis*/
                 $("#infografis").owlCarousel({
                     singleItem: true,
@@ -1877,23 +1878,28 @@ width="1" alt="" /></noscript>
                     var pol_w = $(this).attr("data-value");
                     $(this).append("<div class=polbar style= width:" + pol_w + "%><span>" + pol_w + "%</span></div>");
                 }); */
-            });
+				})(jQuery);
+		    });
 			}
         </script>
         <script>
 			if(!lite) {
-            $(document).ready(function(){
+            window.addEventListener('DOMContentLoaded', function() {
+		        (function($) {
+				$(document).ready(function(){
 
-                //slider
-                $("#carousel").owlCarousel({
-                    navigation : false,
-                    pagination : true,
-                    slideSpeed : 300,
-                    paginationSpeed : 400,
-                    singleItem : true
-                });
-                
-            }); 
+					//slider
+					$("#carousel").owlCarousel({
+						navigation : false,
+						pagination : true,
+						slideSpeed : 300,
+						paginationSpeed : 400,
+						singleItem : true
+					});
+					
+				}); 
+				})(jQuery);
+		    });
 			}
         </script>
         <script type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/lazyload/lazyestload.js"></script>

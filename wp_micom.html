@@ -1848,15 +1848,15 @@ width="1" alt="" /></noscript>
         </script>-->
         
             <!-- FOOTER END -->
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
+            <!--<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
             <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
             <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
             <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>
+            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>-->
             <script>
-			if(!lite) {
+			function() {
+				if(!lite) {
 			
-				function() {
 					var scripts = [
 						'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
 						'https://m.mediaindonesia.com/assets/default/js/less.js', 
@@ -1869,8 +1869,8 @@ width="1" alt="" /></noscript>
 						s = document.getElementsByTagName('script')[0];
 						s.parentNode.insertBefore(sjs, s);
 					}
-				 })();
-			}
+				}
+			})();
 			
             window.addEventListener('DOMContentLoaded', function() {
 		        (function($) {

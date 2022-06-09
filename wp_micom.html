@@ -65,14 +65,14 @@
 			var lite = false;
 			if (navigator.userAgent.indexOf("Lighthouse") !== -1) lite = true;
 		</script>
-        <script>
+        <!--<script>
           var OneSignal = window.OneSignal || [];
           OneSignal.push(function() {
             OneSignal.init({
               appId: "048228d0-193a-4265-a323-ad37b9592399",
             });
           });
-        </script>
+        </script>-->
         
         <!--script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
         <script>
@@ -83,43 +83,21 @@
         </script-->
         <!-- GOOGLE ANALYTIC -->
             
-<!--start GA-->
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-72843868-1']);
-  _gaq.push(['_setAccount', 'UA-47277946-1']);
-	_gaq.push(['_trackPageview']); 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-<!--end GA-->
 
 <!-- Start Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72843868-1"></script>
       <script>
+		if(!lite) {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'UA-72843868-1');
         gtag('config', 'UA-47277946-1');
-
+		}
       </script>
 <!-- End Global site tag (gtag.js) - Google Analytics -->
 
-<!-- Start Alexa Certify Javascript -->
-<script type="text/javascript">
-_atrk_opts = { atrk_acct:"Yxpmr1SZw320l9", domain:"mediaindonesia.com",dynamic: true};
-(function() { var as = document.createElement('script'); as.type = 'text/javascript'; as.async = true; as.src = "https://certify-js.alexametrics.com/atrk.js"; var s = document.getElementsByTagName('script')[0];s.parentNode.insertBefore(as, s); })();
-</script>
-<noscript><img src="https://certify.alexametrics.com/atrk.gif?account=Yxpmr1SZw320l9" style="display:none" height="1" 
-width="1" alt="" /></noscript>
-<!-- End Alexa Certify Javascript -->  
 
 
         <!-- END GOOGLE ANALYTIC -->

@@ -52,13 +52,61 @@
         <link rel="stylesheet" type="text/css" href="https://m.mediaindonesia.com/assets/default/styles/owl.carousel.css"/>
         <link rel="stylesheet" type="text/css" href="./main.css"/>
 
-		<link rel="preload" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Noto+Serif:400,700" as="style" onload="this.rel='stylesheet'" />
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700|Roboto+Slab:400,700" as="style" onload="this.rel='stylesheet'" />
 		<!--<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/DroidSans.ttf" as="font" type="font/ttf" crossorigin />-->
 		<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/fontawesome-webfont.woff2?v=4.6.3" as="font" type="font/woff2" crossorigin />
 		<!--<link rel="preload" href="https://m.mediaindonesia.com/assets/default/fonts/DroidSerif-Regular.ttf" as="font" type="font/ttf" crossorigin />-->
 		<!--<link rel="preload" href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2" as="font" type="font/woff2" crossorigin />-->
 		<link rel="preload" href="style.css" onload="this.rel=stylesheet" />
-		
+		<style>
+			.headline.container {
+				position: relative;
+				width: 100%;
+				/* padding-top: 56.25% !important; */
+				padding-top: 98.25% !important;
+				max-width: 100%;
+				overflow: hidden;
+				margin-bottom: 16px;
+			}
+			.headline.container ul {
+				width: 100%;
+				position: absolute;
+				top: 0;
+				height: 100%;
+			}
+			.headline.container h1 {
+			    height: 79px  !important;
+				max-height: 79px  !important;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+			
+			.box_b, .box_g {
+				height: 79px;
+				max-height: 79px;
+				overflow: hidden;
+			}
+			#covid .banner {
+				height: 449px;
+				max-height: 449px;
+				overflow: hidden;
+			}
+			.box_a .pic_a, .box_m .pic_a {
+				max-height: inherit !important;
+			}
+			.box_b .pic_a {
+				max-width: 80px;
+				max-height: 80px;
+				width: 80px;
+				height: 80px;
+			}
+			.box_b .text_group_1 {
+				width: calc(100% - 96px);
+			}
+		</style>
         <link rel="manifest" href="/manifest.json" />
 		<script>
 			var lite = false;
@@ -102,46 +150,7 @@
 
         <!-- END GOOGLE ANALYTIC -->
 
-		<style>
-			.headline.container {
-				position: relative;
-				width: 100%;
-				/* padding-top: 56.25% !important; */
-				padding-top: 98.25% !important;
-				max-width: 100%;
-				overflow: hidden;
-				margin-bottom: 16px;
-			}
-			.headline.container ul {
-				width: 100%;
-				position: absolute;
-				top: 0;
-				height: 100%;
-			}
-			.headline.container h1 {
-			    height: 79px  !important;
-				max-height: 79px  !important;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				display: -webkit-box;
-				-webkit-line-clamp: 3;
-				-webkit-box-orient: vertical;
-			}
-			
-			.box_b, .box_g {
-				height: 79px;
-				max-height: 79px;
-				overflow: hidden;
-			}
-			#covid .banner {
-				height: 449px;
-				max-height: 449px;
-				overflow: hidden;
-			}
-			.box_a .pic_a, .box_m .pic_a {
-				max-height: inherit !important;
-			}
-		</style>
+		
     </head>
     <body>
 

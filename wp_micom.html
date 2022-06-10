@@ -1830,76 +1830,66 @@
             });
         </script>-->
         
-            <!-- FOOTER END -->
-            <!--<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
-            <script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>-->
-            <script>
-			( function() {
-				if(!lite) {
-			
-					var scripts = [
-						'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
-						'https://m.mediaindonesia.com/assets/default/js/less.js', 
-						'https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js',
-						'https://m.mediaindonesia.com/assets/default/js/main.js',
-						'https://m.mediaindonesia.com/assets/default/js/parallax.min.js'
-					];
-					for ( s of scripts ) {
-						sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.async = true; sjs.src = s;
-						s = document.getElementsByTagName('script')[0];
-						s.parentNode.insertBefore(sjs, s);
-					}
+		<!-- FOOTER END -->
+		<!--<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
+		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
+		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
+		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
+		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>-->
+		<script>
+			if(!lite) {
+		
+				var scripts = [
+					'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
+					'https://m.mediaindonesia.com/assets/default/js/less.js', 
+					'https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js',
+					'https://m.mediaindonesia.com/assets/default/js/main.js',
+					'https://m.mediaindonesia.com/assets/default/js/parallax.min.js'
+				];
+				for ( s of scripts ) {
+					sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.async = true; sjs.src = s;
+					s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(sjs, s);
 				}
-			})();
-			
-            window.addEventListener('DOMContentLoaded', function() {
-		        (function($) {
-                /*infografis*/
-                $("#infografis").owlCarousel({
-                    singleItem: true,
-                    navigation: true,
-                    pagination: true
-                });
-                var winwidth = $( window ).width();
-                var slnum = $("#infografis .item").length;
-                var slgap = ((slnum - 1) * 2) + 32;
-                var slwidth = (winwidth - slgap) / slnum;
-                $("#infografis .owl-pagination .owl-page span").css("width" , slwidth + "px");
-                $("#headline").owlCarousel({
-                	singleItem: true,
-                	autoplay: true
-                });
-                /*polling*/
-                /* $(".polling li").each(function(){
-                    $(this).append("<div class=check></div>");
-                    var pol_w = $(this).attr("data-value");
-                    $(this).append("<div class=polbar style= width:" + pol_w + "%><span>" + pol_w + "%</span></div>");
-                }); */
-				})(jQuery);
-		    });
 			}
+			
         </script>
         <script>
 			if(!lite) {
-            window.addEventListener('DOMContentLoaded', function() {
-		        (function($) {
-				$(document).ready(function(){
+				window.addEventListener('DOMContentLoaded', function() {
+					(function($) {
+						/*infografis*/
+						$("#infografis").owlCarousel({
+							singleItem: true,
+							navigation: true,
+							pagination: true
+						});
+						var winwidth = $( window ).width();
+						var slnum = $("#infografis .item").length;
+						var slgap = ((slnum - 1) * 2) + 32;
+						var slwidth = (winwidth - slgap) / slnum;
+						$("#infografis .owl-pagination .owl-page span").css("width" , slwidth + "px");
+						$("#headline").owlCarousel({
+							singleItem: true,
+							autoplay: true
+						});
+						/*polling*/
+						/* $(".polling li").each(function(){
+							$(this).append("<div class=check></div>");
+							var pol_w = $(this).attr("data-value");
+							$(this).append("<div class=polbar style= width:" + pol_w + "%><span>" + pol_w + "%</span></div>");
+						}); */
 
-					//slider
-					$("#carousel").owlCarousel({
-						navigation : false,
-						pagination : true,
-						slideSpeed : 300,
-						paginationSpeed : 400,
-						singleItem : true
-					});
-					
-				}); 
-				})(jQuery);
-		    });
+						//slider
+						$("#carousel").owlCarousel({
+							navigation : false,
+							pagination : true,
+							slideSpeed : 300,
+							paginationSpeed : 400,
+							singleItem : true
+						});				
+					})(jQuery);
+				});
 			}
 			
 			if(lite) {

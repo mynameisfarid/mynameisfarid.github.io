@@ -88,12 +88,12 @@
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72843868-1"></script>
       <script>
 		if(!lite) {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-        gtag('config', 'UA-72843868-1');
-        gtag('config', 'UA-47277946-1');
+			gtag('config', 'UA-72843868-1');
+			gtag('config', 'UA-47277946-1');
 		}
       </script>
 <!-- End Global site tag (gtag.js) - Google Analytics -->
@@ -103,20 +103,31 @@
         <!-- END GOOGLE ANALYTIC -->
 
 		<style>
-			/*.headline.container {
+			.headline.container {
 				position: relative;
 				width: 100%;
 				/* padding-top: 56.25% !important; */
-				padding-top: 96.25% !important;
+				padding-top: 98.25% !important;
 				max-width: 100%;
 				overflow: hidden;
+				margin-bottom: 16px;
 			}
 			.headline.container ul {
 				width: 100%;
 				position: absolute;
 				top: 0;
 				height: 100%;
-			}*/
+			}
+			.headline.container h1 {
+			    height: 80px !important;
+				max-height: 80px !important;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+			
 			.box_b, .box_g {
 				height: 79px;
 				max-height: 79px;
@@ -1831,33 +1842,15 @@
         </script>-->
         
 		<!-- FOOTER END -->
-		<!--<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
-		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
+		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js"></script>
+		<!--<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/less.js"></script>
 		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js"></script>
 		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/main.js"></script>
 		<script defer type="text/javascript" src="https://m.mediaindonesia.com/assets/default/js/parallax.min.js"></script>-->
 		<script>
 			if(!lite) {
-		
-				var scripts = [
-					'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
-					'https://m.mediaindonesia.com/assets/default/js/less.js', 
-					'https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js',
-					'https://m.mediaindonesia.com/assets/default/js/main.js',
-					'https://m.mediaindonesia.com/assets/default/js/parallax.min.js'
-				];
-				for ( s of scripts ) {
-					sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.async = true; sjs.src = s;
-					s = document.getElementsByTagName('script')[0];
-					s.parentNode.insertBefore(sjs, s);
-				}
-			}
-			
-        </script>
-        <script>
-			if(!lite) {
-				window.addEventListener('load', function() {
-					(function($) {
+				var callback = (function() {
+					if(window.jQuery) {
 						/*infografis*/
 						$("#infografis").owlCarousel({
 							singleItem: true,
@@ -1887,8 +1880,32 @@
 							slideSpeed : 300,
 							paginationSpeed : 400,
 							singleItem : true
-						});				
-					})(jQuery);
+						});	
+					}						
+				});
+				
+				var scripts = [
+					// 'https://m.mediaindonesia.com/assets/default/js/jquery-1.11.0.min.js', 
+					'https://m.mediaindonesia.com/assets/default/js/owl.carousel.min.js',
+					'https://m.mediaindonesia.com/assets/default/js/parallax.min.js',
+					'https://m.mediaindonesia.com/assets/default/js/less.js', 
+					'https://m.mediaindonesia.com/assets/default/js/main.js'
+				];
+				for ( s of scripts ) {
+					sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.defer = true; sjs.async = false; sjs.src = s;
+					if (s.indexOf("main.js") !== -1)
+						sjs.addEventListener("load", callback);
+						
+					s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(sjs, s);
+				}
+			}
+			
+        </script>
+        <script>
+			if(!lite) {
+				window.addEventListener('load', function() {
+					
 				});
 			}
 			

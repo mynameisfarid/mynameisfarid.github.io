@@ -82,13 +82,14 @@
 <!-- Start Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-72843868-1"></script>
       <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+        if(!lite) {
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
 
-        gtag('config', 'UA-72843868-1');
-        gtag('config', 'UA-47277946-1');
-
+			gtag('config', 'UA-72843868-1');
+			gtag('config', 'UA-47277946-1');
+		}
       </script>
 <!-- End Global site tag (gtag.js) - Google Analytics -->
 
@@ -374,8 +375,10 @@ function addLink(){var a=document.getElementsByTagName("body")[0];var b;b=window
                     <!-- Mulai Dable secret Widget / Untuk pertanyaan hubungi support@dable.io (secret)-->
                     <div id="dablewidget_JXdwDzlb" data-widget_id="JXdwDzlb">
                     <script>
-                    (function(d,a){d[a]=d[a]||function(){(d[a].q=d[a].q||[]).push(arguments)};}(window,'dable'));
-                    dable('renderWidget', 'dablewidget_JXdwDzlb');
+					if(!lite) {
+						(function(d,a){d[a]=d[a]||function(){(d[a].q=d[a].q||[]).push(arguments)};}(window,'dable'));
+						dable('renderWidget', 'dablewidget_JXdwDzlb');
+					}
                     </script>
                     </div>
                     <!-- Akhiri Dable secret Widget / Untuk pertanyaan hubungi support@dable.io (end secret) -->
@@ -461,8 +464,10 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
                     
                                 <div id="dablewidget_BoxwDmX8" data-widget_id="BoxwDmX8">
                                 <script>
-                                (function(d,a){d[a]=d[a]||function(){(d[a].q=d[a].q||[]).push(arguments)};}(window,'dable'));
-                                dable('renderWidget', 'dablewidget_BoxwDmX8');
+								if(!lite) {
+									(function(d,a){d[a]=d[a]||function(){(d[a].q=d[a].q||[]).push(arguments)};}(window,'dable'));
+									dable('renderWidget', 'dablewidget_BoxwDmX8');
+								}
                                 </script>
                                 </div>
                                 <div id ="parallax_wrap" class="parallax_wrap">
@@ -488,7 +493,9 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
                                     <!-- /21835028929/dable111 -->
                                     <div id='div-gpt-ad-1633344140068-0' style='min-width: 300px; min-height: 600px;'>
                                         <script>
-                                            googletag.cmd.push(function() { googletag.display('div-gpt-ad-1633344140068-0'); });
+                                            if(!lite) { 
+												googletag.cmd.push(function() { googletag.display('div-gpt-ad-1633344140068-0'); });
+											}
                                         </script>
                                     </div>
                                 </div>
@@ -974,7 +981,7 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
             <script src="http://js.rfp.fout.jp/rfp-infeed.js"></script>
             <script type="text/javascript">RFP.InFeed.Default.run({"immediately":true})</script>-->
 
-            <!-- Begin Dable Script / For inquiries, support@dable.io -->
+            <!-- Begin Dable Script / For inquiries, support@dable.io
             <script>
             (function(d,a,b,l,e,_) {
             d[b]=d[b]||function(){(d[b].q=d[b].q||[]).push(arguments)};e=a.createElement(l);
@@ -983,7 +990,7 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
             })(window,document,'dable','script');
             dable('setService', 'm.mediaindonesia.com');
             dable('sendLog');
-            </script>
+            </script> -->
             <!-- End Dable Script / For inquiries, support@dable.io -->
             
             <!-- Infografis 

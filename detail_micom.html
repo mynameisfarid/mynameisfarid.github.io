@@ -95,17 +95,17 @@
 
         <!-- END GOOGLE ANALYTIC -->
 
-       <script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script>
-	if(!lite) {
-		window.googletag = window.googletag || {cmd: []};
-		googletag.cmd.push(function() {
-			googletag.defineSlot('/21835028929/dable111', [300, 600], 'div-gpt-ad-1633344140068-0').addService(googletag.pubads());
-			googletag.pubads().enableSingleRequest();
-			googletag.enableServices();
-		});
-	}
-</script>
+		<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+		<script>
+			if(!lite) {
+				window.googletag = window.googletag || {cmd: []};
+				googletag.cmd.push(function() {
+					googletag.defineSlot('/21835028929/dable111', [300, 600], 'div-gpt-ad-1633344140068-0').addService(googletag.pubads());
+					googletag.pubads().enableSingleRequest();
+					googletag.enableServices();
+				});
+			}
+		</script>
 
 
     </head>
@@ -284,7 +284,7 @@ function addLink(){var a=document.getElementsByTagName("body")[0];var b;b=window
         
 }
 </script>
-<script type="text/javascript" src="https://rv.mediaindonesia.com/www/delivery/spcjs.php?id=3"></script>
+<!--<script type="text/javascript" src="https://rv.mediaindonesia.com/www/delivery/spcjs.php?id=3"></script>-->
 
             <!-- End Revive -->
         <div id="content" class="full_width">
@@ -602,7 +602,7 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
                                          data-ad-client="ca-pub-8225732166813219"
                                          data-ad-slot="2288354514"></ins>
                     <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
+                        if(!lite) (adsbygoogle = window.adsbygoogle || []).push({});
                     </script>
             </div>
 
@@ -735,22 +735,24 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
              <!-- Mulai Dable bottom Widget / Untuk pertanyaan hubungi support@dable.io (bottom) -->
                 <div id="dablewidget_w7WdrJl2" data-widget_id="w7WdrJl2">
                 <script>
+				if(!lite) {
                 (function(d,a){d[a]=d[a]||function(){(d[a].q=d[a].q||[]).push(arguments)};}(window,'dable'));
                 dable('renderWidget', 'dablewidget_w7WdrJl2');
+				}
                 </script>
                 </div>
                 <!-- Akhiri Dable bottom Widget / Untuk pertanyaan hubungi support@dable.io (end bottom) -->
                 
                 <!-- Mulai Advernative -->
                 <div id="0a73de68f10e15626eb98701ecf03adb"></div>
-                <script async src="https://click.advertnative.com/loading/?handle=8936" ></script> 
-                <!-- Akhir Advernative -->
+                <!-- <script async src="https://click.advertnative.com/loading/?handle=8936" ></script> 
+                Akhir Advernative -->
 
                 <!-- Composite Start -->
                 <div id="M683951ScriptRootC1080606">
                 </div>
-                <script src="https://jsc.mgid.com/m/e/mediaindonesia.com.1080606.js" async></script>
-                <!-- Composite End -->
+                <!-- <script src="https://jsc.mgid.com/m/e/mediaindonesia.com.1080606.js" async></script>
+                Composite End -->
 
 
 
@@ -962,7 +964,24 @@ Adapun skema restrukturisasi yang ditawarkan menyesuaikan dengan kelompok kredit
 					'https://m.mediaindonesia.com/assets/default/js/less.js', 
 					'https://m.mediaindonesia.com/assets/default/js/main.js'
 				];
+				
 				for ( s of scripts ) {
+					sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.defer = true; sjs.async = false; sjs.src = s;
+					if (s.indexOf("main.js") !== -1)
+						sjs.addEventListener("load", callback);
+						
+					s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(sjs, s);
+				}
+				
+				
+				var adscripts = [
+					'https://click.advertnative.com/loading/?handle=8936',
+					'https://jsc.mgid.com/m/e/mediaindonesia.com.1080606.js',
+					'https://rv.mediaindonesia.com/www/delivery/spcjs.php?id=3'
+				];
+				
+				for ( s of adscripts ) {
 					sjs = document.createElement('script'); sjs.type = 'text/javascript'; sjs.defer = true; sjs.async = false; sjs.src = s;
 					if (s.indexOf("main.js") !== -1)
 						sjs.addEventListener("load", callback);
